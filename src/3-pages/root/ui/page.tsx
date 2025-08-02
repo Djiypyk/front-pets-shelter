@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import { PATH_PAGE } from '@/7-shared/lib/router'
 
 export const RootPage = () => {
