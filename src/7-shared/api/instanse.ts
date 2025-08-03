@@ -1,8 +1,7 @@
 import axios from 'axios'
-import { t } from 'i18next'
 
 
-import { JWTToken } from '@/7-shared/lib/jwtToken'
+import {JWTToken} from '@/7-shared/lib/jwtToken'
 
 export const instance = axios.create({
   withCredentials: true,
