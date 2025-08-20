@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  background-color: #006d77; /* тёмно-бирюзовый */
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+.logo img {
+  height: 32px;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.btn-signup {
+  background-color: #ff7f50; /* коралловый */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-signup:hover {
+  background-color: #ff956a;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* можно потом заменить на бургер-меню */
+  }
+}

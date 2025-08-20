@@ -1,10 +1,14 @@
-
-import {HomePage} from "@/3-pages/root/ui/heroSection/HeroSection.tsx";
+import HomeScreen from "@/3-pages/root/ui/components/homeScreen/HomeScreen.tsx";
 
 export const RootPage = () => {
 
-        return (
-<HomePage />
-        )
+    return (
+        <div>
+            <h1>HELLO</h1>
+            {/*<Header/>*/}
+            <HomeScreen/>
+        </div>
+
+    )
 
 }
