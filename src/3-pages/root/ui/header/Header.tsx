@@ -1,23 +1,20 @@
+import {Input} from "@/7-shared/ui/components/input/Input.tsx";
 
 const Header = () => {
 
     return (
-        <div>
-            <header className="header">
-                <div className="container">
-                    <div className="logo">
-                        <img src="logo.png" alt="Pets Shelter Logo"/>
-                        <span>Pets Shelter</span>
-                    </div>
+        <div className={"flex items-center justify-between"}>
+            <header className="w-full fixed top-0 left-0 bg-white">
+                {/*<Button className={"mr-2"} onClick={() => {}}></Button>*/}
 
-                    <nav className="nav">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Contact</a>
+                <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+                    {/* Логотип */}
+                    <div className="text-xl font-bold text-amber-500">LOGO</div>
+                    <nav className="hidden md:flex space-x-6">
+                       <a href={'#'}><Input placeholder={'ПОИСК'}/></a>
+                        {/*будет переход на страницу поиска*/}
                     </nav>
 
-                    <a href="#" className="btn-signup">Sign Up</a>
                 </div>
             </header>
         </div>
