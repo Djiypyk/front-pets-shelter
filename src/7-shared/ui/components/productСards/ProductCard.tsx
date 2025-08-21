@@ -25,7 +25,7 @@ export const ProductCard = ({
 
 
     const variantStyles = {
-        primary: "group border border-gray-200 p-4 rounded-lg hover:bg-white hover:shadow-lg hover:border-transparent max-w-64",
+        primary: "group border border-gray-200 p-4 bg-white rounded-lg hover:bg-white hover:shadow-lg hover:border-transparent max-w-64",
         outline: "group border border-indigo-500 p-4 rounded-lg hover:bg-white hover:shadow-lg hover:border-transparent max-w-80"
     }
 
