@@ -1,6 +1,6 @@
 import {Input} from "@/7-shared/ui/components/input/Input.tsx";
 
-const Header = () => {
+export const Header = () => {
 
     return (
         <div className={"flex items-center justify-between"}>
@@ -20,5 +20,3 @@ const Header = () => {
         </div>
     );
 };
-
-export default Header;
