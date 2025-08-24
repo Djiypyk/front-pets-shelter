@@ -11,7 +11,7 @@ export type {
     IUserMe,
 } from './model/types'
 export { EMAIL_MESSAGE_TYPE } from './model/types'
-export { authSlice, setIsAuth, selectIsAuth, selectAuthState, selectMe, setAuthState, setUser } from './model/auth.slice'
+export { authSlice, setIsAuth, selectIsAuth, selectRandomDogImage, selectAuthState, selectMe, setAuthState, setUser, setRandomDogImage } from './model/auth.slice'
 export {
     loginThunk,
     logoutThunk,
@@ -20,4 +20,5 @@ export {
     recoveryPasswordThunk,
     checkTokenThunk,
     registerThunk,
+    testApiRandomDogThunk,
 } from './model/auth.thunks'

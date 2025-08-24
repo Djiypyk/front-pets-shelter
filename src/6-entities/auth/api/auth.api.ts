@@ -23,4 +23,8 @@ export const authApi = {
     checkToken(data: ICheckTokenForm): Promise<boolean> {
         return instance.post('/users/password/check-token/', data)
     },
+    // TODO: удалить этот метод
+    testApiRandomDog(): Promise<any> {
+        return instance.get('breeds/image/random').then((data) => data.data)
+    },
 }
