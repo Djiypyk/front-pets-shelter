@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { IRejectRequest } from '@/7-shared/api'
 import { JWTToken } from '@/7-shared/lib/jwtToken'
 
-import { setAuthState, setIsAuth, setUser } from './auth.slice'
+import { setAuthState, setIsAuth, setRandomDogImage, setUser } from './auth.slice'
 import { ICheckTokenForm, IForgotPassword, ILoginForm, IRegisterForm, IRegistrationBody } from './types'
 
 import { authApi } from '../api/auth.api'
@@ -105,3 +105,16 @@ export const checkTokenThunk = createAsyncThunk<void, ICheckTokenForm, { state: 
         }
     },
 )
+
+// TODO: удалить этот thunk
+export const testApiRandomDogThunk = createAsyncThunk<void, void, { state: RootState }>('auth/testApiRandomDog', async (_, { dispatch, rejectWithValue }) => {
+    try {
+        dispatch(setAuthState({ isLoading: true }))
+        const result = await authApi.testApiRandomDog()
+        dispatch(setRandomDogImage(result.message))
+    } catch (error) {
+        return rejectWithValue(error)
+    } finally {
+        dispatch(setAuthState({ isLoading: false }))
+    }
+})
