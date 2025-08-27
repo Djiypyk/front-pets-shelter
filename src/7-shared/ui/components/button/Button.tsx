@@ -15,7 +15,7 @@ export const Button = ({ children, variant = ButtonVariant.PRIMARY, className = 
     const baseStyles = "px-5 py-2 text-sm rounded-full tracking-wider transition"
 
     const variantStyles = {
-        primary: "bg-orange-500 text-white border border-orange-500 hover:bg-white hover:text-orange-500 ring-4 ring-yellow-500 ring-opacity-50",
+        primary: "bg-orange-400 text-white border border-orange-500 hover:bg-orange-500 hover:text-white-500 ring-2 ring-yellow-500 ring-opacity-50",
         outline: "bg-white text-black border border-gray-300 hover:bg-black hover:text-white"
     }
     return (
