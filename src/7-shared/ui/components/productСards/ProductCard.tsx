@@ -24,6 +24,8 @@ export const ProductCard = ({
                                 ...props
                             }: ProductCardProps) => {
 
+
+
     const variantStyles = {
         primary: "bg-orange-400 text-white rounded-xl p-4 shadow-md hover:bg-orange-500 transition",
         outline: "bg-white text-black border border-gray-300 rounded-xl p-4 shadow-sm hover:bg-gray-50 hover:border-gray-400 transition",

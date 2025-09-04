@@ -1,2 +1,2 @@
 export { RootPage } from './ui/page'
-export { PreviewPets } from './ui/components/PreviewPets/PreviewPets.tsx'
+export { PreviewPets } from '@/3-pages/root/ui/PreviewPets/PreviewPets.tsx'
