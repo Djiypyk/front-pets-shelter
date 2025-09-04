@@ -4,9 +4,12 @@ import axios from 'axios'
 import {JWTToken} from '@/7-shared/lib/jwtToken'
 
 export const instance = axios.create({
-  withCredentials: true,
+  // TODO: при подключении настоящей апишки вернуть сюда withCredentials: true
+  withCredentials: false,
   // TODO: Replace with new baseURL
-  baseURL: `http://localhost:8000/api`,
+  // baseURL: `http://localhost:8000/api`,
+  baseURL: 'https://dog.ceo/api/',
+
 })
 
 instance.interceptors.request.use(
