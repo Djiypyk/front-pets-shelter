@@ -1,16 +1,17 @@
-import {Button} from "@/7-shared/ui";
-import {ButtonVariant} from "@/7-shared/ui/components/button/Button.tsx";
-import Home from "@/3-pages/root/ui/components/homeScreen/Home.tsx";
 import {Header} from "@/4-widgets/root";
+import {PreviewPets} from "@/3-pages/root";
+import {Button, ButtonVariant} from "@/7-shared/ui";
 
 export const RootPage = () => {
 
     return (
         <div>
             <Header/>
-            <Home/>
-            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+            <PreviewPets/>
+            <div className="flex items-center justify-center h-screen">
                 <Button children={'+'} variant={ButtonVariant.OUTLINE}/>
+                <Button children={'+'} variant={ButtonVariant.INLINE}/>
+                <Button children={'+'} variant={ButtonVariant.PRIMARY}/>
             </div>
         </div>
 

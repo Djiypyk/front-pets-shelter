@@ -1,22 +1,25 @@
-import classNames from 'classnames';
+import {ButtonHTMLAttributes} from "react";
+import classNames from "classnames";
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     children: React.ReactNode
-    variant?: "primary" | "outline"
+    variant?: "primary" | "outline" | "inline"
     className?: string
 }
 
 export enum ButtonVariant {
     PRIMARY = "primary",
     OUTLINE = "outline",
+    INLINE = "inline",
 }
 
-export const Button = ({ children, variant = ButtonVariant.PRIMARY, className = "", ...props }: ButtonProps) => {
+export const Button = ({children, variant = ButtonVariant.PRIMARY, className = "", ...props}: ButtonProps) => {
     const baseStyles = "px-5 py-2 text-sm rounded-full tracking-wider transition"
 
     const variantStyles = {
-        primary: "bg-orange-400 text-white border border-orange-500 hover:bg-orange-500 hover:text-white-500 ring-2 ring-yellow-500 ring-opacity-50",
-        outline: "bg-white text-black border border-gray-300 hover:bg-black hover:text-white"
+        primary: "bg-orange-400 text-white hover:bg-orange-500 hover:text-white-500 ring-opacity-50",
+        outline: "bg-white text-gray-900 border border-gray-300 hover:bg-gray-900 hover:text-white ",
+        inline: "border border-transparent text-gray-600 hover:border-gray-300 hover:text-black px-3 py-1",
     }
     return (
         <button
