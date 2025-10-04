@@ -1,2 +1,5 @@
 export { ErrorPage } from './templates/errorPage/errorPage'
 export { NotFoundPage } from './templates/notFoundPage/notFoundPage'
+export { Button, ButtonVariant } from './components/button/Button.tsx'
+export { ProductCard, ProductCardVariant } from './components/productСards/ProductCard.tsx'
+export { Input } from './components/input/Input.tsx'
