@@ -6,10 +6,13 @@ type ProductCardProps = DescriptionPets & {
 }
 
 type DescriptionPets = {
+    id: string
     img: string
     name: string
-    age: string
-    shelter: string
+    age: number
+    breed?: string
+    shelter: string,
+    typePet?: "all" | "cat" | "dog"
 }
 
 export enum ProductCardVariant {
@@ -23,7 +26,6 @@ export const ProductCard = ({
                                 className = '',
                                 ...props
                             }: ProductCardProps) => {
-
 
 
     const variantStyles = {
@@ -42,11 +44,37 @@ export const ProductCard = ({
             )}
             {...props}
         >
-            <div className="flex items-center justify-center w-full">
-                <img className="rounded-lg w-full h-64 object-cover" src={props.img} alt={props.name} />
-            </div>
-            <p className="text-center font-medium text-gray-900">{props.name}, {props.age} года</p>
-            <p className="text-center text-gray-500 text-sm">{props.shelter}</p>
+            <ul className="items-center justify-center w-full" id={props.id}>
+                <img className="rounded-lg w-full max-h-64 object-cover" src={props.img} alt={props.name}/>
+                <li className="pt-4 text-center font-medium text-gray-900">{props.name}, {props.age} года</li>
+                <li className="text-center text-gray-500 text-sm">{props.breed}</li>
+                <li className="text-center text-gray-500 text-sm">{props.shelter}</li>
+            </ul>
         </div>
     )
 }
+
+// <div
+//     data-tid="productCard"
+//     className={classNames(
+//         "flex flex-col items-center justify-between gap-3 w-64 h-96 p-4 rounded-xl bg-white shadow-md",
+//         variantStyles[variant],
+//         className
+//     )}
+//     {...props}
+// >
+//     {/* Обёртка под фиксированный размер изображения */}
+//     <div className="w-full h-48 flex items-center justify-center overflow-hidden rounded-lg">
+//         <img
+//             className="w-full h-full object-cover"
+//             src={props.img}
+//             alt={props.name}
+//         />
+//     </div>
+//
+//     <div className="flex flex-col items-center text-center gap-1">
+//         <p className="font-medium text-gray-900">{props.name}, {props.age} года</p>
+//         <p className="text-gray-500 text-sm">{props.breed}</p>
+//         <p className="text-gray-500 text-sm">{props.shelter}</p>
+//     </div>
+// </div>

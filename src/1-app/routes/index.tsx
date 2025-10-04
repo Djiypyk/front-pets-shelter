@@ -6,7 +6,6 @@ import { AppLayout } from '@/2-layouts/appLayout'
 import { InitLayout } from '@/2-layouts/initLayout'
 
 import { RootPage } from '@/3-pages/root'
-import { SecondPage } from '@/3-pages/second'
 
 import { PATH_PAGE, RouteErrorBoundary } from '@/7-shared/lib/router'
 import { NotFoundPage } from '@/7-shared/ui'
@@ -54,10 +53,10 @@ export const router = createBrowserRouter([
             element: <RootPage />,
             path: PATH_PAGE.root,
           },
-          {
-            element: <SecondPage />,
-            path: PATH_PAGE.second,
-          },
+          // {
+          //   element: <SecondPage />,
+          //   path: PATH_PAGE.second,
+          // },
           // {
           //   element: <UsersPage />,
           //   path: PATH_PAGE.users.root,
