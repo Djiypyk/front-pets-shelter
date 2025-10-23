@@ -7,11 +7,11 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 export const Input = ({variant = "solid", ...props}: InputProps) => {
 
 
-    const base = "data-tid='input' px-4 py-2.5 text-sm rounded-md transition outline-none"
+    const base = "data-tid='input' px-4 py-3 rounded-full transition outline-none w-77"
     const style =
         variant === "outline"
-            ? "m-4 border border-gray-400 text-black bg-white focus:ring-2 focus:ring-orange-400"
-            : "m-4 bg-white-100 text-gray-900 border-transparent focus:ring-1 focus:ring-gray-200"
+            ? "mt-4 border border-gray-300 text-black bg-white focus:ring-1 focus:ring-orange-600"
+            : "mt-4 bg-white-100 text-gray-900 border-transparent focus:ring-1 focus:ring-gray-200"
 
-    return <input className={`${base} ${style}`} {...props} style={{borderRadius: "40px", maxWidth: '400px'}}/>
+    return <input className={`${base} ${style}`} {...props}/>
 }
